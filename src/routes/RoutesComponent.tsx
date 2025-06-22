@@ -6,9 +6,9 @@ const UserForm = lazy(() => import('../pages/forms/UserForm'));
 const ProductForm = lazy(() => import('../pages/forms/ProductForm'));
 
 const RoutesComponent = () => (
-  <Suspense fallback={<div>Loading...</div>}>
+  <Suspense fallback={<div className="p-4 text-center">Loading...</div>}>
     <Routes>
-      <Route path="/" element={<Navigate to="/forms/user" />} />
+      <Route path="/" element={<Navigate to="/forms/user" replace />} />
       <Route
         path="/forms/user"
         element={

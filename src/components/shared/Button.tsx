@@ -1,12 +1,13 @@
-import React from 'react';
 
-const Button = ({ children, ...props }: React.ButtonHTMLAttributes<HTMLButtonElement>) => (
-  <button
-    {...props}
-    className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 focus:outline-none"
-  >
-    {children}
-  </button>
-);
+import React from 'react';
+import { Button as MUIButton, ButtonProps } from '@mui/material';
+
+const Button = ({ children, ...props }: ButtonProps) => {
+  return (
+    <MUIButton variant="contained" color="primary" {...props}>
+      {children}
+    </MUIButton>
+  );
+};
 
 export default Button;
